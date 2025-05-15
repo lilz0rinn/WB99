@@ -82,12 +82,13 @@ body {
     padding: 30px 200px;
     background: #ffffff;
     text-align: center;
+    
 }
 
 .exclusive-offer h2 {
     font-size: 3em;
     margin-bottom: 120px;
-    
+    flex-wrap: wrap;
 }
 
 .exclusive-offer .images {
@@ -104,8 +105,13 @@ body {
 }
 
 .exclusive-offer .buttons {
-    margin-top: 200px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
+
 
 .btn {
     display: inline-block;
@@ -170,7 +176,12 @@ body {
 .about-us {
     padding: 60px 20px;
     background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
+
 
 .about-us h2 {
     text-align: center;
@@ -193,7 +204,12 @@ body {
 .jdm-info {
     padding: 40px 20px;
     background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
+
 
 .jdm-info h2 {
     text-align: center;
@@ -206,22 +222,54 @@ body {
 }
 
 
+
+
+
+
+
+
 .footer {
     background: var(--primary-color);
     color: #000000;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 
-.footer .contact-info p {
+.footer .container h2 {
+    margin-bottom: 20px;
+}
+
+.contact-blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-block h3 {
+    margin-bottom: 10px;
+}
+
+.contact-block p {
     margin: 5px 0;
 }
 
 
-@media (max-width: 600px) {
-    .header h1 {
-        display: block;
-        margin: 10px 0;
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
     }
     .nav ul {
         flex-direction: column;
@@ -232,8 +280,11 @@ body {
     }
     .exclusive-offer .images img {
         width: 80%;
+        margin: 0 auto;
     }
     .car-grid .grid {
         grid-template-columns: 1fr;
     }
 }
+
+
